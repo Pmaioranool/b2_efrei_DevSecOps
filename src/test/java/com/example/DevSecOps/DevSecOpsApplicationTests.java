@@ -13,7 +13,6 @@ class DevSecOpsApplicationTests {
 		String plate = car.getPlateNumber();
 
 		assertEquals("AA11BB", plate);
-
 	}
 
 }
