@@ -9,27 +9,27 @@ import java.util.ArrayList;
 @RestController
 public class ServiceWeb {
 
-    ArrayList<Car> cars = new ArrayList<Car>();
+    ArrayList<Chicken> Chickens = new ArrayList<Chicken>();
 
     public ServiceWeb() {
-        Car car = new Car("AA11BB", "ferrari", 2000);
-        cars.add(car);
-        car = new Car("BB22CC", "porsche", 1000);
-        cars.add(car);
-        car = new Car("CC33DD", "peugeot", 500);
-        cars.add(car);
-        car = new Car("DD44EE", "peugeot", 500);
-        cars.add(car);
+        Chicken Chicken = new Chicken("jockey", "none", 2);
+        Chickens.add(Chicken);
+        Chicken = new Chicken("Jeff", "A", 5);
+        Chickens.add(Chicken);
+        Chicken = new Chicken("Geoff", "B", 1);
+        Chickens.add(Chicken);
+        Chicken = new Chicken("Danny", "C", 3);
+        Chickens.add(Chicken);
     }
 
-    @GetMapping("/cars/{plateNumber}")
-    public Car disBonjour(@PathVariable("plateNumber") String plaque) {
+    @GetMapping("/Chickens/{name}")
+    public Chicken disBonjour(@PathVariable("name") String name) {
         int i = 0;
-        while (i < cars.size() && cars.get(i).getPlateNumber().equals(plaque) == false) {
+        while (i < Chickens.size() && Chickens.get(i).getName().equals(name) == false) {
             i++;
         }
-        if (i < cars.size()) {
-            return cars.get(i);
+        if (i < Chickens.size()) {
+            return Chickens.get(i);
         } else {
             return null;
         }

@@ -9,10 +9,10 @@ class DevSecOpsApplicationTests {
 
 	@Test
 	void contextLoads() {
-		Car car = new Car("AA11BB", "ferrari", 2000);
-		String plate = car.getPlateNumber();
+		Chicken Chicken = new Chicken("jockey", "none", 2000);
+		String Name = Chicken.getName();
 
-		assertEquals("AA11BB", plate);
+		assertEquals("jockey", Name);
 	}
 
 }
